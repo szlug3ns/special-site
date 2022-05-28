@@ -1,12 +1,16 @@
 body {
-    background: linear-gradient(100deg, rgb(30, 30, 30), rgb(20, 20, 20));
+    background: linear-gradient(100deg, rgb(40, 40, 40), rgb(20, 20, 20));
 }
 
-
-h1 {
+.g {
     font-family: monospace;
-    font-size: 300%;
+    font-size: 200%;
     color: rgb(190, 190, 190);
+    -webkit-animation: fadein 4s;
+    -moz-animation: fadein 4s;
+     -ms-animation: fadein 4s;
+      -o-animation: fadein 4s;
+         animation: fadein 4s;
 }
 
 .container{
@@ -33,7 +37,13 @@ h1 {
     color: rgb(190, 190, 190);
     background-color: transparent;
     text-decoration: none;
-  }
+}
+
+.s:hover {
+    color: rgb(150, 150, 150);
+    background-color: transparent;
+    text-decoration: none;
+}
 
 .typed-out{
     overflow: hidden;
@@ -52,24 +62,20 @@ h1 {
     font-family: monospace;
     font-size: 200%;
     color: rgb(190, 190, 190);
-
-    -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 4s; /* Firefox < 16 */
-        -ms-animation: fadein 4s; /* Internet Explorer */
-         -o-animation: fadein 4s; /* Opera < 12.1 */
+    -webkit-animation: fadein 4s;
+       -moz-animation: fadein 4s;
+        -ms-animation: fadein 4s;
+         -o-animation: fadein 4s;
             animation: fadein 4s;
 }
 
 img {
-    
     border-radius: 8px;
     size: 150%;
-
-
-    -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 4s; /* Firefox < 16 */
-     -ms-animation: fadein 4s; /* Internet Explorer */
-      -o-animation: fadein 4s; /* Opera < 12.1 */
+    -webkit-animation: fadein 4s;
+    -moz-animation: fadein 4s;
+     -ms-animation: fadein 4s;
+      -o-animation: fadein 4s;
          animation: fadein 4s;
 }
 
@@ -102,6 +108,41 @@ footer {
     font-family: monospace;
     font-size: 120%;
     color: rgb(190, 190, 190);
-    position:absolute;
+    position:fixed;
     bottom:0;
+}
+  
+.progress {
+    background: rgba(255,255,255,0.1);
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 30px;
+    width: 500px;
+}
+  
+.progress-value1 {
+    animation: load1 1s normal forwards;
+    background: rgb(190, 190, 190);
+    height: 20px;
+    width: 0;
+}
+  
+  @keyframes load1 {
+    0% { width: 0; }
+    100% { width: 70%; }
+}
+
+.progress-value2 {
+    animation: load2 1s normal forwards;
+    background: rgb(190, 190, 190);
+    height: 20px;
+    width: 0;
+}
+  
+  @keyframes load2 {
+    0% { width: 0; }
+    100% { width: 50%; }
 }
